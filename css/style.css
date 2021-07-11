@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background: #ec6f66; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #f3a183, #ec6f66); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f3a183,
+    #ec6f66
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* =================
+Global
+================= */
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.btn {
+  border: none;
+  border-radius: 3px;
+  background: #84a59d;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 5px 10px rgba(109, 109, 109, 0.288);
+  transition: background 0.2s;
+}
+
+.btn:focus,
+.btn:hover {
+  background: #589e8d;
+}
+
+/* =================
+Typography
+================= */
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+/* =================
+Layout
+================= */
+
+.container {
+  width: 80%;
+  max-width: 500px;
+  background: #fff;
+  padding: 1.5em;
+}
+
+.input-field-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 0.5em;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.0625rem;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover {
+  border-color: #f5cac3;
+}
+
+.btn--add {
+  width: 15%;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.task {
+  position: relative;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  font-size: 0.8rem;
+  background: rgb(235, 235, 235);
+  border-radius: 3px;
+}
+
+.trash-icon {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30px;
+  text-align: center;
+  background: red;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  /* Centers the bin icon in the middle of an element */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task:hover .trash-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn--clear {
+  padding: 0 1em;
+  height: 35px;
+  font-weight: 700;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
